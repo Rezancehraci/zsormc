@@ -2,7 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
         </li>
