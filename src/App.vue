@@ -1,20 +1,30 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hírek</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Webshop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Szavazás</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
   </nav>
   <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 nav {
   padding: 30px;
 }
