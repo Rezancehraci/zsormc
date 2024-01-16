@@ -13,6 +13,11 @@ body {
     .nav-link {
         margin: 0 10px;
         font-size: 1.325rem;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            color: orange;
+        }
     }
 }
 
@@ -34,13 +39,13 @@ body {
         margin: 42px 0;
 
         @media (max-width: 1440px) {
-            margin: 4% 0;
+            margin: 3% 0;
         }
     }
 }
 
 .content {
-    padding: 30px 4%;
+    padding: 30px 2%;
 
     .content-col {
         background: white;
@@ -50,8 +55,10 @@ body {
             padding: 5px;
         }
 
-        &:not(.col-md-8) {
-            margin-left: 4.5%;
+        @media (min-width: 991px) {
+            &.content-infos {
+                margin-left: 8%;
+            }
         }
     }
 }

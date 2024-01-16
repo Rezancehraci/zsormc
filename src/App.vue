@@ -3,7 +3,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 px-0 module_header-col">
-          <img class="img-fluid" src="./assets/img/logo.png" alt="ZsőrMC" width="365">
+          <a href="#" name="logo-home">
+            <img class="img-fluid" src="./assets/img/logo.png" alt="ZsőrMC" width="365">
+          </a>
         </div>
       </div>
     </div>
@@ -12,16 +14,16 @@
     <div class="container-fluid">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
+          <a class="nav-link <%= path === '#' ? 'active' : '' %>" href="#">Kezdőlap</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/news">Hírek</a>
+          <a class="nav-link <%= path === '/zsormc/#/news' ? 'active' : '' %>" href="/zsormc/#/news/">Hírek</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://store.zsormc.hu" target="_blank">Webshop</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/vote">Szavazás</a>
+          <a class="nav-link <%= path === '/zsormc/#/vote' ? 'active' : '' %>" href="/zsormc/#/vote/">Szavazás</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -32,17 +34,27 @@
   <div class="content">
     <div class="container-fluid content-container">
       <div class="row">
-        <div class="col-md-8 col-12 content-col">
+        <div class="col-12 col-sm-10 col-md-10 col-lg-7 content-col content-news">
           <router-view />
         </div>
-        <div class="col-md-3 col-12 content-col">
+        <div class="col-12 col-sm-10 col-md-10 col-lg-4 content-col content-infos">
 
         </div>
       </div>
     </div>
   </div>
+  <footer-component/>
 </template>
 
+<script>
+  import FooterComponent from './components/FooterComponent.vue';
+
+  export default {
+    components: {
+      FooterComponent
+    }
+  }
+</script>
 <style>
 nav {
   padding: 30px;
