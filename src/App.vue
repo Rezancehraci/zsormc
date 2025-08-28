@@ -1,4 +1,14 @@
 <template>
+    <div class="page_header">
+        <div class="page_header-container container">
+            <div class="page_header-logo">
+                  <a href="#" aria-label="home">
+                      <img src="./assets/img/logo.png" alt="ZsőrMC">
+                  </a>
+            </div>
+            <div class="page_header-address"></div>
+        </div>
+    </div>
   <div class="page_header">
     <div class="container-fluid">
       <div class="row">
@@ -26,7 +36,7 @@
           <a class="nav-link <%= path === '/zsormc/#/vote' ? 'active' : '' %>" href="/zsormc/#/vote/">Szavazás</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Linka</a>
         </li>
       </ul>
     </div>
