@@ -55,6 +55,7 @@ body {
     background: #fff;
     border-radius: 6px;
     padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .content-menu-column:first-child {
@@ -77,6 +78,12 @@ body {
                 margin-left: 8%;
             }
         }
+    }
+}
+
+@media (max-width: 991px) {
+    .content-container {
+        flex-direction: column;
     }
 }
 
