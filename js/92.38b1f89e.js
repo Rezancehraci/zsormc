@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkzsormc"]=self["webpackChunkzsormc"]||[]).push([[92],{9092:function(n,r,s){s.r(r),s.d(r,{default:function(){return f}});var c=s(6252);const e={class:"news"};function t(n,r){return(0,c.wg)(),(0,c.iD)("div",e)}var u=s(3744);const a={},o=(0,u.Z)(a,[["render",t]]);var f=o}}]);
+//# sourceMappingURL=92.38b1f89e.js.map
