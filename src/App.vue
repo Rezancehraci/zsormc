@@ -33,7 +33,7 @@
         </div>
     </nav>
     <div class="container page-content-container">
-        <div class="page-container">
+        <div class="content-container">
             <div class="content-menu-column">
                 <router-view />
             </div>
