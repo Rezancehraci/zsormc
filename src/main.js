@@ -9,6 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 // Assets import
-import "./assets/css/style.css";
+import "./assets/css/base.css";
 
 createApp(App).use(store).use(router).mount("#app");

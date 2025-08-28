@@ -7,24 +7,10 @@ body {
     background-color: darkgray;
 }
 
-.navbar-nav {
-    text-align: center;
-    
-    .nav-link {
-        margin: 0 10px;
-        font-size: 1.325rem;
-        transition: all 0.4s ease-in-out;
-
-        &:hover {
-            color: orange;
-        }
-    }
-}
-
 .page_header {
     background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../img/background.png');
     background-size: cover;
-    height: 450px;
+    max-height: 450px;
 
     @media (min-width: 1025px) {
         background-position: 100%;
@@ -40,6 +26,28 @@ body {
 
         @media (max-width: 1440px) {
             margin: 3% 0;
+        }
+    }
+}
+
+.page_header-container {
+    display: flex;
+}
+
+.page_header-logo img {
+    max-width: 365px;
+}
+
+.navbar-nav {
+    text-align: center;
+    
+    .nav-link {
+        margin: 0 10px;
+        font-size: 1.325rem;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            color: orange;
         }
     }
 }
