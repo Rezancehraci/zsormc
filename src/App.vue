@@ -6,39 +6,33 @@
                       <img src="./assets/img/logo.png" alt="ZsőrMC">
                   </a>
             </div>
-            <div class="page_header-address">
-                
+            <div class="page_header-address" @click="copyIP">
+                <div class="page_header-address-count">{{ playerCount }}</div>
+                <div class="page_header-address-ip">{{ serverIP }}</div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg shadow">
-        <div class="container-fluid">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link <%= path === '#' ? 'active' : '' %>" href="#">Kezdőlap</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <%= path === '/zsormc/#/news' ? 'active' : '' %>" href="/zsormc/#/news/">Hírek</a>
-                </li>
-                <li class="nav-item nav-item_webshop">
-                    <a class="nav-link" href="https://store.zsormc.hu" target="_blank">Webshop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <%= path === '/zsormc/#/vote' ? 'active' : '' %>" href="/zsormc/#/vote/">Szavazás</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-            </ul>
+    <div v-if="showModal" class="server_copy-modal">
+        <div class="server_copy-modal-inner">
+            <div class="server_copy-modal-icon">
+                <svg width="90" height="90" viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="30" stroke="#ff9800" stroke-width="4" fill="#fff"/>
+                    <polyline points="20,34 30,44 44,24" fill="none" stroke="#ff9800" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3 class="server_copy-modal-title">IP kimásolva</h3>
+            <p class="server_copy-modal-subtitle">Ne habozz és gyere játszani!</p>
+            <button class="server_copy-modal-button" @click="showModal = false">Ok</button>
         </div>
-    </nav>
+    </div>
+    <NavbarComponent/>
     <div class="container page-content-container">
         <div class="content-container">
             <div class="content-menu-column">
                 <router-view />
             </div>
             <div class="content-menu-column">
-                <div>Teszt div</div>
+                <iframe src="https://discord.com/widget?id=828180680315633715&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </div>
         </div>
     </div>
@@ -46,11 +40,37 @@
 </template>
 
 <script>
+import NavbarComponent from './components/NavbarComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 
 export default {
-    components: {
-        FooterComponent
+    components: { FooterComponent, NavbarComponent },
+    data() {
+        return {
+            playerCount: '...',
+            showModal: false,
+            serverIP: 'play.harmatosbikafing.hu'
+        }
+    },
+    mounted() {
+        this.fetchPlayerCount();
+    },
+    methods: {
+        async fetchPlayerCount() {
+            try {
+                const res = await fetch('https://api.mcsrvstat.us/2/play.harmatosbikafing.hu');
+                const data = await res.json();
+                this.playerCount = (data.players && typeof data.players.online === 'number')
+                    ? data.players.online
+                    : 'N/A';
+            } catch(err) {
+                this.playerCount = 'N/A';
+            }
+        },
+        copyIP() {
+            navigator.clipboard.writeText(this.serverIP);
+            this.showModal = true;
+        }
     }
 }
 </script>
