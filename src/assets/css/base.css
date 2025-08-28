@@ -10,15 +10,7 @@ body {
 .page_header {
     background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../img/background.png');
     background-size: cover;
-    max-height: 450px;
-
-    @media (min-width: 1025px) {
-        background-position: 100%;
-    }
-
-    @media (max-width: 1024px) {
-        background-position-x: center;
-    }
+    min-height: 450px;
 
     .module_header-col {
         text-align: center;
@@ -32,6 +24,11 @@ body {
 
 .page_header-container {
     display: flex;
+    justify-content: center;
+}
+
+.page_header-logo {
+    margin: 1rem 0;
 }
 
 .page_header-logo img {
@@ -68,5 +65,17 @@ body {
                 margin-left: 8%;
             }
         }
+    }
+}
+
+@media (max-width: 1199px) {
+    .page_header {
+        background-position-x: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page_header {
+        background-position: 100%;
     }
 }
