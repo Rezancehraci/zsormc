@@ -37,6 +37,16 @@ body {
     text-align: center;
 }
 
+.navbar .nav-item_webshop {
+    background: green;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.navbar .nav-item_webshop:hover {
+    transform: scale(1.05);
+}
+
 .navbar .navbar-nav .nav-link {
     margin: 0 10px;
     font-size: 1.3rem;

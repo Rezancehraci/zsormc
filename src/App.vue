@@ -20,7 +20,7 @@
                 <li class="nav-item">
                     <a class="nav-link <%= path === '/zsormc/#/news' ? 'active' : '' %>" href="/zsormc/#/news/">Hírek</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item_webshop">
                     <a class="nav-link" href="https://store.zsormc.hu" target="_blank">Webshop</a>
                 </li>
                 <li class="nav-item">
@@ -37,7 +37,9 @@
             <div class="content-menu-column">
                 <router-view />
             </div>
-            <div class="content-menu-column"></div>
+            <div class="content-menu-column">
+                <div>Teszt div</div>
+            </div>
         </div>
     </div>
     <FooterComponent/>
