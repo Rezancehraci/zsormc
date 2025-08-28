@@ -38,14 +38,6 @@
                 <router-view />
             </div>
             <div class="content-menu-column"></div>
-            <div class="row">
-                <div class="col-12 col-sm-10 col-md-10 col-lg-7 content-col content-news">
-                    <router-view />
-                </div>
-                <div class="col-12 col-sm-10 col-md-10 col-lg-4 content-col content-infos">
-
-                </div>
-            </div>
         </div>
     </div>
     <FooterComponent/>

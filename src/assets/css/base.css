@@ -1,10 +1,11 @@
 html {
-    font-family: 'Noto Sans', sans-serif;
-    color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: darkgray;
+    background-color: #f3f5f7;
 }
 
 .page_header {
