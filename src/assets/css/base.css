@@ -11,15 +11,6 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../img/background.png');
     background-size: cover;
     min-height: 450px;
-
-    .module_header-col {
-        text-align: center;
-        margin: 42px 0;
-
-        @media (max-width: 1440px) {
-            margin: 3% 0;
-        }
-    }
 }
 
 .page_header-container {

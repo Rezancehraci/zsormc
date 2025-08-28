@@ -27,24 +27,28 @@
                     <a class="nav-link <%= path === '/zsormc/#/vote' ? 'active' : '' %>" href="/zsormc/#/vote/">Szavazás</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Linka</a>
+                    <a class="nav-link" href="#">Link</a>
                 </li>
             </ul>
         </div>
     </nav>
-  <div class="content">
-    <div class="container-fluid content-container">
-      <div class="row">
-        <div class="col-12 col-sm-10 col-md-10 col-lg-7 content-col content-news">
-          <router-view />
-        </div>
-        <div class="col-12 col-sm-10 col-md-10 col-lg-4 content-col content-infos">
+    <div class="container page-content-container">
+        <div class="page-container">
+            <div class="content-menu-column">
+                <router-view />
+            </div>
+            <div class="content-menu-column"></div>
+            <div class="row">
+                <div class="col-12 col-sm-10 col-md-10 col-lg-7 content-col content-news">
+                    <router-view />
+                </div>
+                <div class="col-12 col-sm-10 col-md-10 col-lg-4 content-col content-infos">
 
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <FooterComponent/>
+    <FooterComponent/>
 </template>
 
 <script>
