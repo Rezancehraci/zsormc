@@ -232,7 +232,7 @@ body {
     margin-bottom: 20px;
 }
 
-.content-menu-column {
+.content-menu-column:last-child {
     background: #fff;
     border-radius: 14px;
     padding: 20px;
@@ -241,6 +241,10 @@ body {
 
 .content-menu-column:first-child {
     flex: 1;
+}
+
+.main-content .section {
+    margin: 1rem 0;
 }
 
 /* Footer */

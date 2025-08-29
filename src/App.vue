@@ -26,13 +26,15 @@
         </div>
     </div>
     <NavbarComponent/>
-    <div class="container page-content-container">
-        <div class="content-container">
-            <div class="content-menu-column">
-                <router-view />
-            </div>
-            <div class="content-menu-column">
-                <iframe src="https://discord.com/widget?id=828180680315633715&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <div class="main-content">
+        <div class="container page-content-container">
+            <div class="content-container">
+                <div class="content-menu-column">
+                    <router-view />
+                </div>
+                <div class="content-menu-column">
+                    <iframe src="https://discord.com/widget?id=828180680315633715&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
             </div>
         </div>
     </div>
