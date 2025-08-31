@@ -1,9 +1,6 @@
 <template>
     <div class="section-news-wrapper" id="section_news_wrapper">
         <div id="news" class="section news-container container">
-            <div class="section-head">
-                <h4 class="section-head-title">Hírek</h4>
-            </div>
             <div class="section-body">
                 <div class="news-card">
                     <div class="card-body">
@@ -13,17 +10,11 @@
                                 <div class="news-card_list-content">
                                     <h3 class="news-card_list-title">{{ news.title }}</h3>
                                     <div class="news-card_list-date">{{ news.date }}</div>
-                                    <div class="news-card_list-description">{{ news.desc }}</div>
+                                    <div class="news-card_list-description">{{ news.short_desc }}</div>
                                     <a :href="`/#/news/${news.id}`" class="news-card_list-button">Tovább</a>
                                 </div>
                             </div>
                         </div>
-                        <form @submit.prevent="addNews">
-                            <input v-model="newNews.title" placeholder="Cím" required>
-                            <input v-model="newNews.img" placeholder="Kép URL">
-                            <textarea v-model="newNews.desc" placeholder="Leírás" required></textarea>
-                            <button type="submit">Új hír hozzáadása</button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -39,7 +30,7 @@ export default {
     data() {
         return {
             newsList: [],
-            newNews: { title: '', desc: '', img: ''}
+            newNews: { title: '', desc: '', img: '', short_desc: '' }
         };
     },
     mounted() {
@@ -62,7 +53,7 @@ export default {
                 date: new Date().toISOString().split('T')[0]
             };
             await addDoc(collection(db, "news"), newsData);
-            this.newNews = { title: '', desc: '', img: '' };
+            this.newNews = { title: '', desc: '', img: '', short_desc: '' };
         }
     }
 }

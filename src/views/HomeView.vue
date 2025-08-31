@@ -1,18 +1,16 @@
 <template>
     <div class="home">
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+        <LatestNewsCard/>
     </div>
-    <LatestNewsCard/>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import '../assets/css/home.css';
 import LatestNewsCard from "@/components/home/LatestNewsCard.vue";
 
 export default {
     name: "HomeView",
-    components: { HelloWorld, LatestNewsCard },
+    components: { LatestNewsCard },
     created() {
         document.title = "ZsőrMC | Kezdőlap";
     },
