@@ -33,6 +33,7 @@
                     <router-view />
                 </div>
                 <div class="content-menu-column">
+                    <LoginComponent/>
                     <iframe src="https://discord.com/widget?id=828180680315633715&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </div>
             </div>
@@ -44,9 +45,10 @@
 <script>
 import NavbarComponent from './components/NavbarComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import LoginComponent from './components/LoginComponent.vue';
 
 export default {
-    components: { FooterComponent, NavbarComponent },
+    components: { FooterComponent, NavbarComponent, LoginComponent },
     data() {
         return {
             playerCount: '...',

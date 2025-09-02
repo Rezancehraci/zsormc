@@ -34,15 +34,8 @@ export default {
         };
     },
     mounted() {
-        /*onSnapshot(collection(db, "news"), (snapshot) => {
-            this.newsList = snapshot.docs.map(doc => ({
-                id: doc.id,
-                ...doc.data()
-            })).sort((a, b) => b.date.localeCompare(a.date));
-        });*/
         onSnapshot(collection(db, "news"), (snapshot) => {
             const docs = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-            console.log("Hírek:", docs); // ← Ezt nézd meg a böngésző Console-ban!
             this.newsList = docs.sort((a, b) => b.date.localeCompare(a.date));
         });
     },

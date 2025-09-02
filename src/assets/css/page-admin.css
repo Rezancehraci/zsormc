@@ -1,0 +1,71 @@
+.user-section__details {
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    margin: 10px auto 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    letter-spacing: 0.4px;
+}
+
+.user-section__details .user-details_avatar {
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    margin-bottom: 12px;
+}
+
+.user-details_name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.user-details_email {
+    background: #d3d3d3;
+    padding: 8px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.user-section__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #fff;
+    border-radius: 8px;
+    margin: 10px auto 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.user-section__form input {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    padding: 8px 10px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.3px;
+    font-size: 0.975rem;
+}
+
+.user-section__form button {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    width: 180px;
+    margin: 2px auto;
+    transition: background 0.2s;
+}
+
+.user-section__form button:hover {
+    background: #fb8c00;
+}
+
+@media (max-width: 991px) {
+    .news-section__table {
+        overflow-x: scroll;
+    }
+}
