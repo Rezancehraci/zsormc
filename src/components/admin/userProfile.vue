@@ -11,8 +11,8 @@
                 </div>
                 <form v-if="showEdit || !user?.displayName" @submit.prevent="updateProfile" class="user-section__form">
                     <input v-model="newName" placeholder="Új felhasználónév"/>
-                    <button type="submit">Mentés</button>
-                    <button type="button" v-if="user?.displayName" @click="showEdit = false">Mégse</button>
+                    <button class="btn" type="submit">Mentés</button>
+                    <button class="btn" type="button" v-if="user?.displayName" @click="showEdit = false">Mégse</button>
                 </form>
             </div>
         </div>

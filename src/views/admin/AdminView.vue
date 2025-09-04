@@ -23,6 +23,9 @@ export default {
         fetchUser() {
             this.user = auth.currentUser;
         }
+    },
+    created() {
+        document.title = "ZsőrMC | Admin";
     }
 }
 </script>

@@ -272,6 +272,23 @@ body {
     letter-spacing: 0.4px;
 }
 
+.btn {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    max-width: 300px;
+    width: 200px;
+    margin: 2px auto;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #fb8c00;
+    color: #fff;
+}
+
 /* Login */
 .content-menu__login {
     display: flex;
@@ -307,22 +324,6 @@ body {
 .content-menu__login input::placeholder {
     color: #aaa;
     font-style: italic;
-}
-
-.content-menu__login .content-menu__login-button {
-    background: #ff9800;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 18px;
-    width: 200px;
-    margin: 10px auto;
-    transition: background 0.2s;
-    text-decoration: none;
-}
-
-.content-menu__login .content-menu__login-button:hover {
-    background: #fb8c00;
 }
 
 .content-menu__login-welcome {

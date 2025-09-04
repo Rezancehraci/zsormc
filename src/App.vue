@@ -37,6 +37,7 @@
                     <iframe src="https://discord.com/widget?id=828180680315633715&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </div>
             </div>
+            <span v-if="$route.name === 'home'">Teszt</span>
         </div>
     </div>
     <FooterComponent/>

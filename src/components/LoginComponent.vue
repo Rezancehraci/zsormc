@@ -4,8 +4,8 @@
             <img v-if="user.displayName" :src="`https://minotar.net/avatar/${user.displayName}/64`" 
             :alt="user.displayName" class="content-menu__login-avatar"/>
             <div>Üdv, <b>{{ user.displayName || user.email }}</b>!</div>
-            <a href="/zsormc/#/admin" class="content-menu__login-button">Admin</a>
-            <button @click="logout" class="content-menu__login-button">Kijelentkezés</button>
+            <a href="/zsormc/#/admin" class="btn content-menu__login-button">Admin</a>
+            <button @click="logout" class="btn content-menu__login-button">Kijelentkezés</button>
         </span>
     </div>
     <div class="content-menu__login" v-else>

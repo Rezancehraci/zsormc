@@ -39,7 +39,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
 }
 
-.user-section__form input {
+.user-section__form input, .user-section__form textarea {
     margin-bottom: 12px;
     border-radius: 8px;
     padding: 8px 10px;
@@ -47,42 +47,77 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     letter-spacing: 0.3px;
     font-size: 0.975rem;
+    transition: box-shadow 0.2s, background 0.2s;
 }
 
-.user-section__form input:focus {
+.user-section__form input:focus, .user-section__form textarea:focus {
     background: #f5f5f5;
     box-shadow: none;
     border-color: transparent;
     outline: 0;
 }
 
-.user-section__form input:focus-within {
+.user-section__form input:focus-within, .user-section__form textarea:focus-within {
     background: #f5f5f5;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.user-section__form input::placeholder {
+.user-section__form input::placeholder, .user-section__form textarea::placeholder {
     color: #aaa;
     font-style: italic;
 }
 
-.user-section__form button {
-    background: #ff9800;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 18px;
-    width: 180px;
-    margin: 2px auto;
+.news-section__button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+    width: auto;
+    max-width: 100%;
+}
+
+.news-section_create, .news-section_delete {
+    min-width: 120px;
+    width: 125px;
+    margin: 0;
+}
+
+.news-section__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.news-section__table th, .news-section__table td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.news-section__table th {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+}
+
+.news-section__table tr:hover {
+    background: #f7f2e6;
     transition: background 0.2s;
 }
 
-.user-section__form button:hover {
-    background: #fb8c00;
+.news-section__table img {
+    border-radius: 4px;
 }
 
 @media (max-width: 991px) {
     .news-section__table {
+        display: block;
         overflow-x: scroll;
+        min-width: 600px;
+        width: 100%;
     }
 }
