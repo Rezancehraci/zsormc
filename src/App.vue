@@ -34,9 +34,10 @@
                 </div>
                 <div class="content-menu-column">
                     <LoginComponent/>
-                    <iframe src="https://discord.com/widget?id=828180680315633715&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    <iframe src="https://discord.com/widget?id=828180680315633715&theme=dark" width="350" height="500" title="Discord szerverünk" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </div>
             </div>
+            <HomeRanks v-if="$route.name === 'home'"/>
             <span v-if="$route.name === 'home'">Teszt</span>
         </div>
     </div>
@@ -47,9 +48,10 @@
 import NavbarComponent from './components/NavbarComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 import LoginComponent from './components/LoginComponent.vue';
+import HomeRanks from './components/home/HomeRanks.vue';
 
 export default {
-    components: { FooterComponent, NavbarComponent, LoginComponent },
+    components: { FooterComponent, NavbarComponent, LoginComponent, HomeRanks },
     data() {
         return {
             playerCount: '...',

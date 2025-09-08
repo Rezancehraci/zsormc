@@ -15,6 +15,7 @@ html, body {
 
 html {
     font-family: 'Roboto', sans-serif;
+    font-display: swap;
     color: #222;
     scroll-behavior: smooth;
 }
